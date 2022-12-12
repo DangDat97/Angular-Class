@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import {StudentCompnent} from "./student/student.compnent";
+import {ClassCompnent} from "./class/class.compnent";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,StudentCompnent,ClassCompnent
   ],
   imports: [
     BrowserModule
