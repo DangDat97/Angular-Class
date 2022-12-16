@@ -1,0 +1,27 @@
+<p>{{className}}</p>
+<h2 [class]="textColor">Number of student: {{NumberStudent}}</h2>
+<h3 *ngIf="NumberStudent==0" class="text-warning">No Student in this class!</h3>
+<button type="button" (click)="addStudent()" class="btn btn-outline-danger">Add Sutdent</button>
+<button type="button" (click)="removeStudent()" class="btn btn-outline-dark">Remove Sutdent</button>
+<h1>
+  danh mục
+</h1>
+<ul>
+  <li *ngFor="let c of categories">{{c}}</li>
+</ul>
+
+<div class="row">
+  <div *ngFor="let p of products" class="col-3 pt-5 h-100 bg-light border-2 box ">
+    <div class="card">
+      <a routerLink="/product/{{p.id}}">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/289691/iphone-14-pro-vang-thumb-600x600.jpg" class="img-fluid p-5" alt="">
+        <div class="card-body">
+          <h2 class="text-drak">Tên Sản Phẩm:{{p.name}}</h2>
+          <h3 class="text-danger">Gía tiền: {{p.price}}</h3>
+          <h4>Số lượng : {{p.sl}}</h4>
+          <button *ngIf="p.sl!=0" class="btn btn-outline-dark">ADD Cart</button>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

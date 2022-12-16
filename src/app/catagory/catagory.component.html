@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row p-5">
+    <div *ngFor="let p of product" class="col-3 ">
+      <div class="card text-center">
+        <a routerLink="/product/{{p.id}}">
+          <p>id:{{p.id}}</p>
+          <div class="card-img" >
+            <img src="{{p.thumbnail}}" style="width: 100%" alt="" >
+          </div>
+
+          <h2>{{p.title}}</h2>
+          <strong>{{p.price}}$</strong>
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <div class="row text-center p-5" >
+    <div >
+      <button (click)="loadMore()" class="btn-outline-dark">Load More</button>
+      <button (click)="nextPage()" class="btn-outline-danger">Next Page</button>
+    </div>
+  </div>
+    <h2>Danh Mục</h2>
+    <ul class="row">
+      <li *ngFor="let c of category" class="col-2">
+        <a routerLink="/category/{{c}}">{{c}}</a>
+      </li>
+    </ul>
+
+</div>

@@ -1,0 +1,16 @@
+ul li{
+  list-style: none;
+  padding-bottom: 8px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+
+}
+
+a:hover{
+  color: darkblue;
+}
